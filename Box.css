@@ -1,13 +1,95 @@
+/* Common styles for all screen sizes */
+.board-container {
+  width: 100%;
+  max-width: 600px; /* Set max-width to limit the width on large screens */
+  margin: 0 auto; /* Center the board on the page */
+}
+
 .board-row {
-   display: flex;
-   justify-content: space-evenly;
-   align-items: center;
-   cursor: pointer;
-   
- }
- 
- .board-container {
-   margin: 20px;
-   min-width: 100px;
- }
- 
+  display: flex;
+}
+
+.square {
+  border: 2px solid #333;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Styles for mobile phones */
+@media (max-width: 767px) {
+  .square {
+    height: 50px;
+    width: 50px;
+    font-size: 14px;
+  }
+}
+
+/* Styles for large screens */
+@media (min-width: 768px) {
+  .square {
+    height: 150px;
+    width: 150px;
+    font-size: 32px;
+  }
+}
+
+/* Color styles */
+.square.X {
+  color: #ff5722; /* Change color for X */
+}
+
+.square.O {
+  color: #2196f3; /* Change color for O */
+}
+
+/* Additional styles */
+.board-row:nth-child(odd) .square:nth-child(odd) {
+  background-color: #76946d; /* Alternate background color for odd squares */
+}
+
+.board-row:nth-child(odd) .square:nth-child(even) {
+  background-color: #76946d; /* Alternate background color for even squares */
+}
+
+.board-row:nth-child(even) .square:nth-child(odd) {
+  background-color: #76946d; /* Alternate background color for odd squares */
+}
+
+.board-row:nth-child(even) .square:nth-child(even) {
+  background-color: #76946d; /* Alternate background color for even squares */
+}
+
+
+
+
+ /* Common styles for all screen sizes */
+.square {
+  border: 1px solid;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles for mobile phones */
+@media (max-width: 767px) {
+  .square {
+    height: 50px; /* Adjust height for smaller screens */
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+/* Styles for large screens */
+@media (min-width: 768px) {
+  .square {
+    height: 150px; /* Adjust height for larger screens */
+    font-size: 18px; /* Adjust font size for larger screens */
+  }
+}
