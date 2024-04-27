@@ -47,7 +47,7 @@ const Main =()=>{
     <div className="board-container">
       {isWinner ? (
         <>
-          {isWinner} won the game{" "}
+        { alert(`${isWinner} won the game `)}
           <button onClick={handleReset}>Play Again</button>
         </>
       ) : (
